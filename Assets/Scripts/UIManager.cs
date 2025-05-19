@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI upgradeCostText;
 
+    
     private void Awake()
     {
         if (Instance == null) Instance = this;
