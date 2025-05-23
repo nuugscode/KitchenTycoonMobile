@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-   public int upgradeCost = 100; 
-   public int incomeBoost = 1;
+    public ToastGrill toastGrill;
+    public FryerStation fryer;
+    public BatteringStation battering;
+    public BoardsStation plate;
 
-   public void UpgradeCooking()
-   {
-    if (CurrencyManager.Instance.SpendMoney(upgradeCost))
-        {
-            CookingManager cooking = FindObjectOfType<CookingManager>();
-            cooking.incomeMultiplier += incomeBoost;
+    public void UpgradeToast() {
+        toastGrill.Upgrade();
+        UIManager.Instance.UpdateToastUpgradeUI(toastGrill.upgradeCost);
+    }
 
-            upgradeCost += 100; 
-            UIManager.Instance.UpdateUpgradeCostUI(upgradeCost);
-            UIManager.Instance.UpdateMoneyUI(CurrencyManager.Instance.currentMoney);
+    public void UpgradeFryer() {
+        fryer.Upgrade();
+        UIManager.Instance.UpdateFryerUpgradeUI(fryer.upgradeCost);
+    }
 
-            Debug.Log("Upgraded! New multiplier: " + cooking.incomeMultiplier);
-       }
-       else
-        {
-            Debug.Log("Not enough money to upgrade!");
-        }
-   }
+    public void UpgradeBattering() {
+        battering.Upgrade();
+        UIManager.Instance.UpdateBatteringUpgradeUI(battering.upgradeCost);
+    }
+
+    public void UpgradePlate() {
+        plate.Upgrade();
+        UIManager.Instance.UpdatePlateUpgradeUI(plate.upgradeCost);
+    }
 }

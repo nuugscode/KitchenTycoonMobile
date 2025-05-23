@@ -1553,7 +1553,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1592461767}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1592461767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,8 +1758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e082a93a290449e28002e5210e0e8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeCost: 100
-  incomeBoost: 1
+  toastGrill: {fileID: 0}
+  fryer: {fileID: 0}
+  battering: {fileID: 0}
+  plate: {fileID: 0}
 --- !u!114 &1738436025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1776,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1446291143}
   upgradeCostText: {fileID: 0}
+  toastUpgradeText: {fileID: 0}
+  fryerUpgradeText: {fileID: 0}
+  batteringUpgradeText: {fileID: 0}
+  plateUpgradeText: {fileID: 0}
 --- !u!114 &1738436026
 MonoBehaviour:
   m_ObjectHideFlags: 0
