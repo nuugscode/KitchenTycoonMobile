@@ -11,8 +11,5 @@ public class BoardsStation : StationBase
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

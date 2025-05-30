@@ -9,22 +9,26 @@ public class UpgradeManager : MonoBehaviour
     public BatteringStation battering;
     public BoardsStation plate;
 
-    public void UpgradeToast() {
+    public void UpgradeToast()
+    {
         toastGrill.Upgrade();
         UIManager.Instance.UpdateToastUpgradeUI(toastGrill.upgradeCost);
     }
 
-    public void UpgradeFryer() {
+    public void UpgradeFryer()
+    {
         fryer.Upgrade();
         UIManager.Instance.UpdateFryerUpgradeUI(fryer.upgradeCost);
     }
 
-    public void UpgradeBattering() {
+    public void UpgradeBattering()
+    {
         battering.Upgrade();
         UIManager.Instance.UpdateBatteringUpgradeUI(battering.upgradeCost);
     }
 
-    public void UpgradePlate() {
+    public void UpgradePlate()
+    {
         plate.Upgrade();
         UIManager.Instance.UpdatePlateUpgradeUI(plate.upgradeCost);
     }
